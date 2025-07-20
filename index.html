@@ -1,3 +1,4 @@
+<!-- Everything else remains unchanged -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,15 +8,9 @@
   <meta name="author" content="Your Name" />
   <title>The Flopa Life Development Log</title>
   <link rel="icon" href="https://i.imgur.com/f8YDSIN.png" type="image/png" />
-
-  <!-- Pixel Font -->
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
+    html { scroll-behavior: smooth; }
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
@@ -25,7 +20,6 @@
       color: #333;
       image-rendering: pixelated;
     }
-
     header {
       background-color: #111;
       height: 160px;
@@ -34,14 +28,19 @@
       justify-content: center;
       color: #fff;
     }
-
-    
+    header h1 {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 2rem;
+      background: linear-gradient(90deg, #ff7f50, #ff6347);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 3s ease-in-out infinite;
+    }
     @keyframes glow {
       0% { text-shadow: 0 0 6px #ff7f50; }
       50% { text-shadow: 0 0 16px #ff6347; }
       100% { text-shadow: 0 0 6px #ff7f50; }
     }
-
     nav {
       background: #fff;
       display: flex;
@@ -53,7 +52,6 @@
       z-index: 999;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
-
     nav a {
       font-family: 'Press Start 2P', cursive;
       font-size: 10px;
@@ -65,17 +63,14 @@
       text-shadow: 0 1px #fff;
       transition: background 0.2s ease;
     }
-
     nav a:hover {
       background: #ff6347;
       color: #fff;
     }
-
     .hero {
       text-align: center;
       margin: 30px auto 10px;
     }
-
     .hero-banner {
       background: linear-gradient(to right, #ff7f50, #ff6347);
       padding: 15px 25px;
@@ -86,12 +81,10 @@
       box-shadow: 0 0 12px rgba(255, 99, 71, 0.6);
       animation: pop-in 0.8s ease-out;
     }
-
     @keyframes pop-in {
       from { opacity: 0; transform: scale(0.8); }
       to { opacity: 1; transform: scale(1); }
     }
-
     .content {
       background: rgba(255, 255, 255, 0.97);
       padding: 30px;
@@ -101,42 +94,18 @@
       box-shadow: 0 0 0 4px #ff6347;
       border-radius: 8px;
     }
-
     h3, h4 {
       font-family: 'Press Start 2P', cursive;
       font-size: 1rem;
       color: #ff6347;
     }
-
     .post {
       text-align: left;
       font-family: 'Segoe UI', sans-serif;
     }
-
     .post p {
       line-height: 1.6;
     }
-
-    .pixel-button {
-      display: inline-block;
-      margin-top: 20px;
-      font-family: 'Press Start 2P', cursive;
-      font-size: 10px;
-      padding: 10px 20px;
-      background-color: #222;
-      color: #fff;
-      border: 3px solid #ff6347;
-      text-decoration: none;
-      cursor: pointer;
-      transition: transform 0.1s ease-in-out, background 0.2s ease;
-    }
-
-    .pixel-button:hover {
-      background-color: #ff6347;
-      color: #fff;
-      transform: scale(1.05);
-    }
-
     footer {
       background-color: rgba(255,255,255,0.95);
       text-align: center;
@@ -168,9 +137,6 @@
     <section id="home">
       <h3>About the Project</h3>
       <p><strong>The Flopa Life</strong> is a relaxed skateboarding life sim set in a sleepy town where you rebuild a run-down skate park and run a skate shop, collect junk to craft boards, and embrace the skater lifestyle one kickflip at a time.</p>
-
-      <a href="#" class="pixel-button">Start Game</a>
-      <a href="#" class="pixel-button">Wishlist</a>
     </section>
 
     <section id="updates">
@@ -206,4 +172,3 @@
   </footer>
 </body>
 </html>
-
