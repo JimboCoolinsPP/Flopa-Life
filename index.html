@@ -4,76 +4,81 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Flopa Life</title>
+
+  <!-- Google Font for retro pixel vibe -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+
   <style>
-    html, body {
+    /* Clean Reset */
+    * {
       margin: 0;
       padding: 0;
-      background: #1a1c2c;
-      font-family: 'Press Start 2P', monospace;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: url('https://i.imgur.com/vQhMfH2.png') repeat; /* Replace with your own background if you want */
       color: #fff;
-      overflow: hidden;
-    }
-
-    /* Background animation */
-    .background {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      background: url('https://i.imgur.com/EhR4n6Z.gif') repeat-x;
-      background-size: cover;
-      animation: scroll-bg 30s linear infinite;
-      z-index: -1;
-    }
-
-    @keyframes scroll-bg {
-      from { background-position: 0 0; }
-      to { background-position: -1000px 0; }
-    }
-
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      gap: 20px;
+      font-family: 'Press Start 2P', cursive;
+      image-rendering: pixelated;
       text-align: center;
+      padding: 40px 10px;
     }
 
     h1 {
-      font-size: 28px;
-      color: #ffcc00;
-      text-shadow: 2px 2px #000;
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #f8f8f8;
+      text-shadow: 2px 2px 0 #333;
     }
 
-    .pixel-button {
+    .btn {
+      display: inline-block;
+      background: url('https://i.imgur.com/oLHR7UQ.png') no-repeat center;
+      background-size: contain;
       width: 200px;
       height: 60px;
-      background: url('https://i.imgur.com/HVKbTTq.png') no-repeat center;
-      background-size: contain;
+      line-height: 60px;
+      color: #fff;
+      margin: 10px;
+      cursor: pointer;
+      text-decoration: none;
       image-rendering: pixelated;
       border: none;
-      cursor: pointer;
-      font-size: 14px;
-      color: #fff;
-      text-shadow: 1px 1px #000;
     }
 
-    .pixel-button:hover {
-      transform: scale(1.05);
-      transition: transform 0.2s;
+    .btn:hover {
+      filter: brightness(1.2);
+    }
+
+    p {
+      max-width: 600px;
+      margin: 20px auto;
+      font-size: 12px;
+      line-height: 1.6;
+      text-shadow: 1px 1px 0 #222;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 10px;
+      color: #aaa;
     }
   </style>
 </head>
 <body>
-  <div class="background"></div>
+  <h1>THE FLOPA LIFE</h1>
 
-  <div class="container">
-    <h1>The Flopa Life</h1>
+  <p>
+    A chill pixel-art skateboarding life sim. Build your skate shop, fix the park, talk to weird animals, and vibe.
+  </p>
 
-    <button class="pixel-button">Dev Log</button>
-    <button class="pixel-button">About</button>
-    <button class="pixel-button">Contact</button>
-  </div>
+  <a href="#" class="btn">Dev Log</a>
+  <a href="#" class="btn">Screenshots</a>
+  <a href="#" class="btn">Follow</a>
+
+  <footer>
+    &copy; 2025 The Flopa Life
+  </footer>
 </body>
 </html>
