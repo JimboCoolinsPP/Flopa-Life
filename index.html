@@ -1,174 +1,79 @@
-<!-- Everything else remains unchanged -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Dev log for The Flopa Life, a chill skateboarding life sim about rebuilding a skate park, crafting boards, and living the skater lifestyle." />
-  <meta name="author" content="Your Name" />
-  <title>The Flopa Life Development Log</title>
-  <link rel="icon" href="https://i.imgur.com/f8YDSIN.png" type="image/png" />
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <title>The Flopa Life</title>
   <style>
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Segoe UI', sans-serif;
+    html, body {
       margin: 0;
       padding: 0;
-      background: url('https://i.imgur.com/f8YDSIN.png') no-repeat center center fixed;
-      background-size: cover;
-      color: #333;
-      image-rendering: pixelated;
+      background: #1a1c2c;
+      font-family: 'Press Start 2P', monospace;
+      color: #fff;
+      overflow: hidden;
     }
-    header {
-      background-color: #111;
-      height: 160px;
+
+    /* Background animation */
+    .background {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: url('https://i.imgur.com/EhR4n6Z.gif') repeat-x;
+      background-size: cover;
+      animation: scroll-bg 30s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes scroll-bg {
+      from { background-position: 0 0; }
+      to { background-position: -1000px 0; }
+    }
+
+    .container {
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      color: #fff;
-    }
-    header h1 {
-      font-family: 'Press Start 2P', cursive;
-      font-size: 2rem;
-      background: linear-gradient(90deg, #ff7f50, #ff6347);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: glow 3s ease-in-out infinite;
-    }
-    @keyframes glow {
-      0% { text-shadow: 0 0 6px #ff7f50; }
-      50% { text-shadow: 0 0 16px #ff6347; }
-      100% { text-shadow: 0 0 6px #ff7f50; }
-    }
-    nav {
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      padding: 10px 0;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    nav a {
-      font-family: 'Press Start 2P', cursive;
-      font-size: 10px;
-      color: #333;
-      text-decoration: none;
-      padding: 6px 12px;
-      background: #fefefe;
-      border: 3px solid #ff6347;
-      text-shadow: 0 1px #fff;
-      transition: background 0.2s ease;
-    }
-    nav a:hover {
-      background: #ff6347;
-      color: #fff;
-    }
-    .hero {
+      height: 100vh;
+      gap: 20px;
       text-align: center;
-      margin: 30px auto 10px;
     }
-    .hero-banner {
-      background: linear-gradient(to right, #ff7f50, #ff6347);
-      padding: 15px 25px;
-      color: white;
-      font-size: 1.5rem;
-      font-family: 'Press Start 2P', cursive;
-      border-radius: 8px;
-      box-shadow: 0 0 12px rgba(255, 99, 71, 0.6);
-      animation: pop-in 0.8s ease-out;
+
+    h1 {
+      font-size: 28px;
+      color: #ffcc00;
+      text-shadow: 2px 2px #000;
     }
-    @keyframes pop-in {
-      from { opacity: 0; transform: scale(0.8); }
-      to { opacity: 1; transform: scale(1); }
+
+    .pixel-button {
+      width: 200px;
+      height: 60px;
+      background: url('https://i.imgur.com/HVKbTTq.png') no-repeat center;
+      background-size: contain;
+      image-rendering: pixelated;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      color: #fff;
+      text-shadow: 1px 1px #000;
     }
-    .content {
-      background: rgba(255, 255, 255, 0.97);
-      padding: 30px;
-      margin: 20px auto;
-      max-width: 900px;
-      border: 4px solid #222;
-      box-shadow: 0 0 0 4px #ff6347;
-      border-radius: 8px;
-    }
-    h3, h4 {
-      font-family: 'Press Start 2P', cursive;
-      font-size: 1rem;
-      color: #ff6347;
-    }
-    .post {
-      text-align: left;
-      font-family: 'Segoe UI', sans-serif;
-    }
-    .post p {
-      line-height: 1.6;
-    }
-    footer {
-      background-color: rgba(255,255,255,0.95);
-      text-align: center;
-      padding: 12px;
-      margin-top: 30px;
-      color: #555;
-      font-size: 0.9rem;
-      border-top: 1px solid #ccc;
+
+    .pixel-button:hover {
+      transform: scale(1.05);
+      transition: transform 0.2s;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>The Flopa Life Dev Log</h1>
-  </header>
+  <div class="background"></div>
 
-  <nav>
-    <a href="#home">HOME</a>
-    <a href="#updates">UPDATES</a>
-    <a href="games.html">GAMES</a>
-    <a href="#contact">CONTACT</a>
-  </nav>
+  <div class="container">
+    <h1>The Flopa Life</h1>
 
-  <div class="hero">
-    <h2 class="hero-banner">Skate, Craft, Chill — Welcome to The Flopa Life</h2>
+    <button class="pixel-button">Dev Log</button>
+    <button class="pixel-button">About</button>
+    <button class="pixel-button">Contact</button>
   </div>
-
-  <div class="content">
-    <section id="home">
-      <h3>About the Project</h3>
-      <p><strong>The Flopa Life</strong> is a relaxed skateboarding life sim set in a sleepy town where you rebuild a run-down skate park and run a skate shop, collect junk to craft boards, and embrace the skater lifestyle one kickflip at a time.</p>
-    </section>
-
-    <section id="updates">
-      <h3>Dev Log Updates</h3>
-      <div class="post">
-        <h4>Update #1: Player Character Progress + Gameplay Core</h4>
-        <p><strong>Date:</strong> July 12, 2025</p>
-        <p>This month I’ve locked in the player’s basic movement! The character feels fluid, snappy, and responsive. </p> 
-        <p> Working on some art for the city! So far I have the skate shop done, I finished the pizza shop, and also have the some other simpler things like roads/sidewalks done. </p>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h3>Contact Me</h3>
-      <p>Got questions or want to share feedback? Reach out at <a href="mailto:jimmyc41018@gmail.com" style="color: #ff6347;">jimmyc41018@gmail.com</a>.</p>
-    </section>
-
-    <section id="comments">
-      <h3>Join the Discussion</h3>
-      <div id="utterances-comments"></div>
-      <script src="https://utteranc.es/client.js"
-        repo="your-github-username/your-repo-name"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-      </script>
-    </section>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 The Flopa Life. All rights reserved.</p>
-  </footer>
 </body>
 </html>
