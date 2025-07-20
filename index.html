@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dev log for The Flopa Life, a chill skateboarding life sim about rebuilding a skate park, crafting boards, and living the skater lifestyle." />
+  <meta name="author" content="Your Name" />
+  <title>The Flopa Life Development Log</title>
+  <link rel="icon" href="https://i.imgur.com/f8YDSIN.png" type="image/png" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('https://i.imgur.com/f8YDSIN.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+    }
+    header {
+      background-color: #111;
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+    header h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, #ff7f50, #ff6347);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 3s ease-in-out infinite;
+    }
+    @keyframes glow {
+      0% { text-shadow: 0 0 6px #ff7f50; }
+      50% { text-shadow: 0 0 16px #ff6347; }
+      100% { text-shadow: 0 0 6px #ff7f50; }
+    }
+    nav {
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    nav a {
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ff6347;
+    }
+    .hero {
+      text-align: center;
+      margin: 30px auto 10px;
+    }
+    .hero-banner {
+      background: linear-gradient(to right, #ff7f50, #ff6347);
+      padding: 15px 25px;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+      border-radius: 30px;
+      box-shadow: 0 0 12px rgba(255, 99, 71, 0.6);
+      animation: pop-in 0.8s ease-out;
+    }
+    @keyframes pop-in {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .content {
+      background: rgba(255, 255, 255, 0.97);
+      padding: 30px;
+      margin: 20px auto;
+      max-width: 900px;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    }
+    .post {
+      text-align: left;
+    }
+    .post h4 {
+      color: #ff6347;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+    .post p {
+      line-height: 1.6;
+    }
+    footer {
+      background-color: rgba(255,255,255,0.95);
+      text-align: center;
+      padding: 12px;
+      margin-top: 30px;
+      color: #555;
+      font-size: 0.9rem;
+      border-top: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>The Flopa Life Dev Log</h1>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#updates">Updates</a>
+    <a href="games.html">My Browser Games</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="hero">
+    <h2 class="hero-banner">Skate, Craft, Chill — Welcome to The Flopa Life</h2>
+  </div>
+
+  <div class="content">
+    <section id="home">
+      <h3>About the Project</h3>
+      <p><strong>The Flopa Life</strong> is a relaxed skateboarding life sim set in a sleepy town where you rebuild a run-down skate park, collect junk to craft boards, and embrace the skater lifestyle one kickflip at a time.</p>
+    </section>
+
+    <section id="updates">
+      <h3>Dev Log Updates</h3>
+
+      <div class="post">
+        <h4>Update #5: Player Character Progress + Gameplay Core</h4>
+        <p><strong>Date:</strong> July 20, 2025</p>
+        <p>This month I’ve locked in the player’s basic movement — smooth skating with push animations and a working ollie mechanic! The character feels fluid, snappy, and responsive. I’m experimenting with grind rails and board physics now to expand gameplay variety. </p>
+        <p>The first gameplay loop is coming together: you wake up, grab your board, explore town, and collect broken parts to repair the park or craft new gear. Energy limits how much you can do in a day, but you can refuel with pizza or chill at your home base. More on that next month!</p>
+      </div>
+
+    </section>
+
+    <section id="contact">
+      <h3>Contact Me</h3>
+      <p>Got questions or want to share feedback? Reach out at <a href="mailto:jimmyc41018@gmail.com" style="color: #ff6347;">jimmyc41018@gmail.com</a>.</p>
+    </section>
+
+    <!-- GitHub Comments via Utterances -->
+    <section id="comments">
+      <h3>Join the Discussion</h3>
+      <div id="utterances-comments"></div>
+      <script src="https://utteranc.es/client.js"
+        repo="your-github-username/your-repo-name"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+      </script>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 The Flopa Life. All rights reserved.</p>
+  </footer>
+</body>
+</html>
