@@ -7,10 +7,15 @@
   <meta name="author" content="Your Name" />
   <title>The Flopa Life Development Log</title>
   <link rel="icon" href="https://i.imgur.com/f8YDSIN.png" type="image/png" />
+
+  <!-- Pixel Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
   <style>
     html {
       scroll-behavior: smooth;
     }
+
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
@@ -18,7 +23,9 @@
       background: url('https://i.imgur.com/f8YDSIN.png') no-repeat center center fixed;
       background-size: cover;
       color: #333;
+      image-rendering: pixelated;
     }
+
     header {
       background-color: #111;
       height: 160px;
@@ -27,19 +34,22 @@
       justify-content: center;
       color: #fff;
     }
+
     header h1 {
-      font-size: 3rem;
-      font-weight: 800;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 2rem;
       background: linear-gradient(90deg, #ff7f50, #ff6347);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       animation: glow 3s ease-in-out infinite;
     }
+
     @keyframes glow {
       0% { text-shadow: 0 0 6px #ff7f50; }
       50% { text-shadow: 0 0 16px #ff6347; }
       100% { text-shadow: 0 0 6px #ff7f50; }
     }
+
     nav {
       background: #fff;
       display: flex;
@@ -51,52 +61,90 @@
       z-index: 999;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
+
     nav a {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 10px;
       color: #333;
       text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
+      padding: 6px 12px;
+      background: #fefefe;
+      border: 3px solid #ff6347;
+      text-shadow: 0 1px #fff;
+      transition: background 0.2s ease;
     }
+
     nav a:hover {
-      color: #ff6347;
+      background: #ff6347;
+      color: #fff;
     }
+
     .hero {
       text-align: center;
       margin: 30px auto 10px;
     }
+
     .hero-banner {
       background: linear-gradient(to right, #ff7f50, #ff6347);
       padding: 15px 25px;
       color: white;
-      font-size: 2rem;
-      font-weight: bold;
-      border-radius: 30px;
+      font-size: 1.5rem;
+      font-family: 'Press Start 2P', cursive;
+      border-radius: 8px;
       box-shadow: 0 0 12px rgba(255, 99, 71, 0.6);
       animation: pop-in 0.8s ease-out;
     }
+
     @keyframes pop-in {
       from { opacity: 0; transform: scale(0.8); }
       to { opacity: 1; transform: scale(1); }
     }
+
     .content {
       background: rgba(255, 255, 255, 0.97);
       padding: 30px;
       margin: 20px auto;
       max-width: 900px;
-      border-radius: 12px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+      border: 4px solid #222;
+      box-shadow: 0 0 0 4px #ff6347;
+      border-radius: 8px;
     }
+
+    h3, h4 {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 1rem;
+      color: #ff6347;
+    }
+
     .post {
       text-align: left;
+      font-family: 'Segoe UI', sans-serif;
     }
-    .post h4 {
-      color: #ff6347;
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-    }
+
     .post p {
       line-height: 1.6;
     }
+
+    .pixel-button {
+      display: inline-block;
+      margin-top: 20px;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 10px;
+      padding: 10px 20px;
+      background-color: #222;
+      color: #fff;
+      border: 3px solid #ff6347;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.1s ease-in-out, background 0.2s ease;
+    }
+
+    .pixel-button:hover {
+      background-color: #ff6347;
+      color: #fff;
+      transform: scale(1.05);
+    }
+
     footer {
       background-color: rgba(255,255,255,0.95);
       text-align: center;
@@ -114,10 +162,10 @@
   </header>
 
   <nav>
-    <a href="#home">Home</a>
-    <a href="#updates">Updates</a>
-    <a href="games.html">My Browser Games</a>
-    <a href="#contact">Contact</a>
+    <a href="#home">HOME</a>
+    <a href="#updates">UPDATES</a>
+    <a href="games.html">GAMES</a>
+    <a href="#contact">CONTACT</a>
   </nav>
 
   <div class="hero">
@@ -128,19 +176,19 @@
     <section id="home">
       <h3>About the Project</h3>
       <p><strong>The Flopa Life</strong> is a relaxed skateboarding life sim set in a sleepy town where you rebuild a run-down skate park and run a skate shop, collect junk to craft boards, and embrace the skater lifestyle one kickflip at a time.</p>
+
+      <a href="#" class="pixel-button">Start Game</a>
+      <a href="#" class="pixel-button">Wishlist</a>
     </section>
 
     <section id="updates">
       <h3>Dev Log Updates</h3>
-
       <div class="post">
         <h4>Update #1: Player Character Progress + Gameplay Core</h4>
         <p><strong>Date:</strong> July 12, 2025</p>
         <p>This month I’ve locked in the player’s basic movement! The character feels fluid, snappy, and responsive. </p> 
-        <p> Working on some art for the city! So far I have the skate shop done, I finished the pizza shop , and also have the some other simpler things like roads/sidewalks done. </p>
-
+        <p> Working on some art for the city! So far I have the skate shop done, I finished the pizza shop, and also have the some other simpler things like roads/sidewalks done. </p>
       </div>
-
     </section>
 
     <section id="contact">
@@ -148,7 +196,6 @@
       <p>Got questions or want to share feedback? Reach out at <a href="mailto:jimmyc41018@gmail.com" style="color: #ff6347;">jimmyc41018@gmail.com</a>.</p>
     </section>
 
-    <!-- GitHub Comments via Utterances -->
     <section id="comments">
       <h3>Join the Discussion</h3>
       <div id="utterances-comments"></div>
