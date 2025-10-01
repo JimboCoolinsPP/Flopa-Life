@@ -3,192 +3,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Dev log for The Flopa Life, a chill skateboarding life sim about rebuilding a skate park, crafting boards, and living the skater lifestyle." />
+  <meta name="description" content="Quack Studios homepage and developer portfolio." />
   <meta name="author" content="Your Name" />
-  <title>The Flopa Life Development Log</title>
+  <title>Quack Studios | The Flopa Life</title>
   <link rel="icon" href="https://i.imgur.com/f8YDSIN.png" type="image/png" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f8e8dc; /* Stardew-like warm tone */
-      color: #333;
-    }
-
-    header {
-      background-color: #111;
-      height: 160px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-    }
-
-    header h1 {
-      font-family: 'Press Start 2P', cursive;
-      font-size: 2rem;
-      background: linear-gradient(90deg, #ff7f50, #ff6347);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: glow 3s ease-in-out infinite;
-    }
-
-    @keyframes glow {
-      0% { text-shadow: 0 0 6px #ff7f50; }
-      50% { text-shadow: 0 0 16px #ff6347; }
-      100% { text-shadow: 0 0 6px #ff7f50; }
-    }
-
-    nav {
-      background: #fff8f0;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      padding: 10px 0;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-
-    nav a {
-      font-family: 'Press Start 2P', cursive;
-      font-size: 10px;
-      color: #333;
-      text-decoration: none;
-      padding: 6px 12px;
-      background: #fff;
-      border: 2px solid #ff6347;
-      text-shadow: 0 1px #fff;
-      transition: background 0.2s ease;
-    }
-
-    nav a:hover {
-      background: #ff6347;
-      color: #fff;
-    }
-
-    .hero {
-      text-align: center;
-      margin: 30px auto 10px;
-    }
-
-    .hero-banner {
-      background: linear-gradient(to right, #ff7f50, #ff6347);
-      padding: 15px 25px;
-      color: white;
-      font-size: 1.5rem;
-      font-family: 'Press Start 2P', cursive;
-      border-radius: 8px;
-      box-shadow: 0 0 12px rgba(255, 99, 71, 0.4);
-      animation: pop-in 0.8s ease-out;
-    }
-
-    @keyframes pop-in {
-      from { opacity: 0; transform: scale(0.8); }
-      to { opacity: 1; transform: scale(1); }
-    }
-
-    .content {
-      background: #fffdf9;
-      padding: 30px;
-      margin: 20px auto;
-      max-width: 900px;
-      border: 4px solid #dca;
-      box-shadow: 0 0 0 4px #ff6347;
-      border-radius: 8px;
-    }
-
-    h3, h4 {
-      font-family: 'Press Start 2P', cursive;
-      font-size: 1rem;
-      color: #ff6347;
-    }
-
-    .post {
-      text-align: left;
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    .post p {
-      line-height: 1.6;
-    }
-
-    footer {
-      background-color: #fff8f0;
-      text-align: center;
-      padding: 12px;
-      margin-top: 30px;
-      color: #555;
-      font-size: 0.9rem;
-      border-top: 1px solid #ccc;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>The Flopa Life Dev Log</h1>
+    <h1>Quack Studios</h1>
   </header>
 
   <nav>
     <a href="#home">HOME</a>
-    <a href="#updates">UPDATES</a>
+    <a href="devlog.html">DEV LOG</a>
     <a href="games.html">GAMES</a>
     <a href="#contact">CONTACT</a>
   </nav>
 
   <div class="hero">
-    <h2 class="hero-banner">SKATE, CREATE, CHILL — Welcome to The Flopa Life</h2>
+    <h2 class="hero-banner">Welcome to Quack Studios</h2>
   </div>
 
   <div class="content">
-    <!-- ✅ UPDATED HOME SECTION -->
     <section id="home">
       <h3>About Me & Quack Studios</h3>
-      <p><strong>Hey, I’m JimboCoolins!</strong> I’m learning to become an indie game developer and the creator of <strong>Quack Studios</strong>, a small one-person studio focused on making cozy, quirky, and creative games. My goal is to design experiences that feel relaxing, fun, and a little unexpected.</p>
+      <p><strong>Hey, I’m [Your Name]!</strong> I’m an indie game developer and the creator of <strong>Quack Studios</strong>, a small one-person studio focused on making cozy, quirky, and creative games. My goal is to design experiences that feel relaxing, fun, and a little unexpected.</p>
 
       <p>At Quack Studios, I love experimenting with ideas — from skateboarding life sims to silly duck-themed adventures. Each project is a chance to mix charm, humor, and meaningful gameplay, giving players something unique to enjoy.</p>
 
       <p><em>The Flopa Life</em> is my current passion project: a chill skateboarding life sim where you rebuild a run-down skate park, craft boards, and live out the skater lifestyle. But this site will also be home to dev logs and updates for future games and prototypes.</p>
-    </section>
-    <!-- ✅ END HOME SECTION -->
-
-    <section id="updates">
-      <h3>Dev Log Updates</h3>
-      <div class="post">
-        <h4>Update #1: Player Character Art/Animation + Gameplay Core</h4>
-        <p><strong>Date:</strong> July 12, 2025</p>
-        <p>This month I’ve locked in the player’s basic movement! The character feels fluid, snappy, and responsive.</p> 
-        <p>Working on some art for the city! So far I have the skate shop done, I finished the pizza shop, and also have some other simpler things like roads/sidewalks done.</p>
-      </div>
     </section>
 
     <section id="contact">
       <h3>Contact Me</h3>
       <p>Got questions or want to share feedback? Reach out at <a href="mailto:jimmyc41018@gmail.com" style="color: #ff6347;">jimmyc41018@gmail.com</a>.</p>
     </section>
-
-    <section id="comments">
-      <h3>Join the Discussion</h3>
-      <div id="utterances-comments"></div>
-      <script src="https://utteranc.es/client.js"
-        repo="your-github-username/your-repo-name"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-      </script>
-    </section>
   </div>
 
   <footer>
-    <p>&copy; 2025 The Flopa Life. All rights reserved.</p>
+    <p>&copy; 2025 Quack Studios. All rights reserved.</p>
   </footer>
 </body>
 </html>
