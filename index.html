@@ -3,12 +3,84 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Quack Studios homepage and developer portfolio." />
+  <meta name="description" content="Quack Studios — Indie developer making cozy, quirky, and creative games." />
   <meta name="author" content="Your Name" />
-  <title>Quack Studios | The Flopa Life</title>
+  <title>Quack Studios</title>
   <link rel="icon" href="https://i.imgur.com/f8YDSIN.png" type="image/png" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8e8dc;
+      color: #333;
+    }
+    header {
+      background-color: #111;
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+    header h1 {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 2rem;
+      background: linear-gradient(90deg, #ff7f50, #ff6347);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 3s ease-in-out infinite;
+    }
+    @keyframes glow {
+      0% { text-shadow: 0 0 6px #ff7f50; }
+      50% { text-shadow: 0 0 16px #ff6347; }
+      100% { text-shadow: 0 0 6px #ff7f50; }
+    }
+    nav {
+      background: #fff8f0;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    nav a {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 10px;
+      color: #333;
+      text-decoration: none;
+      padding: 6px 12px;
+      background: #fff;
+      border: 2px solid #ff6347;
+      text-shadow: 0 1px #fff;
+      transition: background 0.2s ease;
+    }
+    nav a:hover { background: #ff6347; color: #fff; }
+    .content {
+      background: #fffdf9;
+      padding: 30px;
+      margin: 20px auto;
+      max-width: 900px;
+      border: 4px solid #dca;
+      box-shadow: 0 0 0 4px #ff6347;
+      border-radius: 8px;
+    }
+    h3 { font-family: 'Press Start 2P', cursive; color: #ff6347; }
+    footer {
+      background-color: #fff8f0;
+      text-align: center;
+      padding: 12px;
+      margin-top: 30px;
+      color: #555;
+      font-size: 0.9rem;
+      border-top: 1px solid #ccc;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -16,23 +88,17 @@
   </header>
 
   <nav>
-    <a href="#home">HOME</a>
+    <a href="index.html">HOME</a>
     <a href="devlog.html">DEV LOG</a>
     <a href="games.html">GAMES</a>
     <a href="#contact">CONTACT</a>
   </nav>
 
-  <div class="hero">
-    <h2 class="hero-banner">Welcome to Quack Studios</h2>
-  </div>
-
   <div class="content">
     <section id="home">
       <h3>About Me & Quack Studios</h3>
       <p><strong>Hey, I’m JimboCoolins!</strong> I’m an indie game developer and the creator of <strong>Quack Studios</strong>, a small one-person studio focused on making cozy, quirky, and creative games. My goal is to design experiences that feel relaxing, fun, and a little unexpected.</p>
-
       <p>At Quack Studios, I love experimenting with ideas — from skateboarding life sims to silly duck-themed adventures. Each project is a chance to mix charm, humor, and meaningful gameplay, giving players something unique to enjoy.</p>
-
       <p><em>The Flopa Life</em> is my current passion project: a chill skateboarding life sim where you rebuild a run-down skate park, craft boards, and live out the skater lifestyle. But this site will also be home to dev logs and updates for future games and prototypes.</p>
     </section>
 
