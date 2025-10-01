@@ -1,0 +1,128 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8e8dc; /* Stardew-like warm tone */
+  color: #333;
+}
+
+header {
+  background-color: #111;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+header h1 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2rem;
+  background: linear-gradient(90deg, #ff7f50, #ff6347);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glow 3s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 6px #ff7f50; }
+  50% { text-shadow: 0 0 16px #ff6347; }
+  100% { text-shadow: 0 0 6px #ff7f50; }
+}
+
+nav {
+  background: #fff8f0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav a {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  color: #333;
+  text-decoration: none;
+  padding: 6px 12px;
+  background: #fff;
+  border: 2px solid #ff6347;
+  text-shadow: 0 1px #fff;
+  transition: background 0.2s ease;
+}
+
+nav a:hover {
+  background: #ff6347;
+  color: #fff;
+}
+
+.hero {
+  text-align: center;
+  margin: 30px auto 10px;
+}
+
+.hero-banner {
+  background: linear-gradient(to right, #ff7f50, #ff6347);
+  padding: 15px 25px;
+  color: white;
+  font-size: 1.5rem;
+  font-family: 'Press Start 2P', cursive;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(255, 99, 71, 0.4);
+  animation: pop-in 0.8s ease-out;
+}
+
+@keyframes pop-in {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.content {
+  background: #fffdf9;
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 900px;
+  border: 4px solid #dca;
+  box-shadow: 0 0 0 4px #ff6347;
+  border-radius: 8px;
+}
+
+h3, h4 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem;
+  color: #ff6347;
+}
+
+.post {
+  text-align: left;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.post p {
+  line-height: 1.6;
+}
+
+footer {
+  background-color: #fff8f0;
+  text-align: center;
+  padding: 12px;
+  margin-top: 30px;
+  color: #555;
+  font-size: 0.9rem;
+  border-top: 1px solid #ccc;
+}
+
+/* Mobile fix */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
