@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Quack Studios — Indie developer making cozy, quirky, and creative games." />
-  <meta name="author" content="Your Name" />
+  <meta name="author" content="JimboCoolins" />
   <title>Quack Studios</title>
   <link rel="icon" href="https://i.imgur.com/f8YDSIN.png" type="image/png" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -18,14 +18,18 @@
       color: #333;
     }
 
+    /* Banner Header */
     header {
       position: relative;
-      text-align: center;
+      height: 160px; /* fixed height for consistent display */
+      overflow: hidden;
     }
 
     header img {
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover; /* ensures image fills header without stretching */
+      display: block;
     }
 
     header h1 {
@@ -38,6 +42,7 @@
       color: #fff;
       text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
       animation: glow 3s ease-in-out infinite;
+      margin: 0;
     }
 
     @keyframes glow {
@@ -46,6 +51,7 @@
       100% { text-shadow: 2px 2px 8px rgba(0,0,0,0.7), 0 0 6px #ff7f50; }
     }
 
+    /* Navigation */
     nav {
       background: #fff8f0;
       display: flex;
@@ -72,6 +78,7 @@
 
     nav a:hover { background: #ff6347; color: #fff; }
 
+    /* Main Content */
     .content {
       background: #fffdf9;
       padding: 30px;
@@ -84,6 +91,7 @@
 
     h3 { font-family: 'Press Start 2P', cursive; color: #ff6347; }
 
+    /* Footer */
     footer {
       background-color: #fff8f0;
       text-align: center;
