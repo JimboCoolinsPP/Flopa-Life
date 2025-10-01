@@ -3,28 +3,82 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Development log for The Flopa Life by Quack Studios." />
+  <meta name="description" content="Dev log for The Flopa Life and other Quack Studios projects." />
   <meta name="author" content="Your Name" />
-  <title>The Flopa Life Dev Log</title>
+  <title>Dev Log | Quack Studios</title>
   <link rel="icon" href="https://i.imgur.com/f8YDSIN.png" type="image/png" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" /> <!-- optional if you want to move styles to one file -->
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; margin: 0; background-color: #f8e8dc; color: #333; }
+    header {
+      background-color: #111;
+      height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+    header h1 {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 1.8rem;
+      color: #ff6347;
+    }
+    nav {
+      background: #fff8f0;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    nav a {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 10px;
+      color: #333;
+      text-decoration: none;
+      padding: 6px 12px;
+      background: #fff;
+      border: 2px solid #ff6347;
+      text-shadow: 0 1px #fff;
+      transition: background 0.2s ease;
+    }
+    nav a:hover { background: #ff6347; color: #fff; }
+    .content {
+      background: #fffdf9;
+      padding: 30px;
+      margin: 20px auto;
+      max-width: 900px;
+      border: 4px solid #dca;
+      box-shadow: 0 0 0 4px #ff6347;
+      border-radius: 8px;
+    }
+    h3, h4 { font-family: 'Press Start 2P', cursive; color: #ff6347; }
+    .post p { line-height: 1.6; }
+    footer {
+      background-color: #fff8f0;
+      text-align: center;
+      padding: 12px;
+      margin-top: 30px;
+      color: #555;
+      font-size: 0.9rem;
+      border-top: 1px solid #ccc;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>The Flopa Life Dev Log</h1>
+    <h1>Dev Log</h1>
   </header>
 
   <nav>
-    <a href="index.html#home">HOME</a>
+    <a href="index.html">HOME</a>
     <a href="devlog.html">DEV LOG</a>
     <a href="games.html">GAMES</a>
     <a href="index.html#contact">CONTACT</a>
   </nav>
-
-  <div class="hero">
-    <h2 class="hero-banner">Development Journey — The Flopa Life</h2>
-  </div>
 
   <div class="content">
     <section id="updates">
@@ -32,21 +86,9 @@
       <div class="post">
         <h4>Update #1: Player Character Art/Animation + Gameplay Core</h4>
         <p><strong>Date:</strong> July 12, 2025</p>
-        <p>This month I’ve locked in the player’s basic movement! The character feels fluid, snappy, and responsive.</p> 
+        <p>This month I’ve locked in the player’s basic movement! The character feels fluid, snappy, and responsive.</p>
         <p>Working on some art for the city! So far I have the skate shop done, I finished the pizza shop, and also have some other simpler things like roads/sidewalks done.</p>
       </div>
-    </section>
-
-    <section id="comments">
-      <h3>Join the Discussion</h3>
-      <div id="utterances-comments"></div>
-      <script src="https://utteranc.es/client.js"
-        repo="your-github-username/your-repo-name"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-      </script>
     </section>
   </div>
 
