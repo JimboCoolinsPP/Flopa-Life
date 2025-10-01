@@ -21,14 +21,14 @@
     /* Banner Header */
     header {
       position: relative;
-      height: 120px; /* fixed height */
+      height: 100px; /* smaller header */
       overflow: hidden;
     }
 
     header img {
       width: 100%;
       height: 100%;
-      object-fit: cover; /* fill header without stretching */
+      object-fit: cover;
       display: block;
     }
 
@@ -38,7 +38,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       font-family: 'Press Start 2P', cursive;
-      font-size: 2rem;
+      font-size: 1.8rem;
       color: #fff;
       text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
       animation: glow 3s ease-in-out infinite;
@@ -100,6 +100,17 @@
       color: #555;
       font-size: 0.9rem;
       border-top: 1px solid #ccc;
+    }
+
+    /* Responsive Header */
+    @media (max-width: 600px) {
+      header {
+        height: 70px;
+      }
+
+      header h1 {
+        font-size: 1.2rem;
+      }
     }
   </style>
 </head>
