@@ -21,35 +21,27 @@
     /* Header */
     header {
       background: #fff8f0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 15px;
-      padding: 20px 0;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 15px 0;
       position: sticky;
       top: 0;
       z-index: 1000;
-    }
-
-    header img {
-      height: 50px;
-      width: auto;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
     header h1 {
       font-family: 'Press Start 2P', cursive;
       font-size: 1.8rem;
       color: #ff6347;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
       margin: 0;
       animation: glow 3s ease-in-out infinite;
     }
 
     @keyframes glow {
-      0% { text-shadow: 2px 2px 8px rgba(0,0,0,0.2), 0 0 6px #ff7f50; }
-      50% { text-shadow: 2px 2px 8px rgba(0,0,0,0.2), 0 0 16px #ff6347; }
-      100% { text-shadow: 2px 2px 8px rgba(0,0,0,0.2), 0 0 6px #ff7f50; }
+      0% { text-shadow: 2px 2px 8px rgba(0,0,0,0.3), 0 0 6px #ff7f50; }
+      50% { text-shadow: 2px 2px 8px rgba(0,0,0,0.3), 0 0 16px #ff6347; }
+      100% { text-shadow: 2px 2px 8px rgba(0,0,0,0.3), 0 0 6px #ff7f50; }
     }
 
     /* Navigation */
@@ -61,7 +53,7 @@
       padding: 12px 0;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       position: sticky;
-      top: 90px;
+      top: 70px;
       z-index: 999;
     }
 
@@ -73,7 +65,6 @@
       padding: 6px 12px;
       background: #fff;
       border: 2px solid #ff6347;
-      text-shadow: 0 1px #fff;
       transition: all 0.2s ease-in-out;
     }
 
@@ -86,17 +77,31 @@
     /* Main Content */
     .content {
       background: #fffdf9;
-      padding: 30px;
+      padding: 40px;
       margin: 40px auto;
       max-width: 900px;
       border: 4px solid #dca;
       box-shadow: 0 0 0 4px #ff6347;
       border-radius: 8px;
+      text-align: center;
+    }
+
+    .content img {
+      display: block;
+      margin: 0 auto 25px;
+      width: 150px;
+      height: auto;
     }
 
     h3 {
       font-family: 'Press Start 2P', cursive;
       color: #ff6347;
+      margin-top: 0;
+    }
+
+    p {
+      text-align: left;
+      line-height: 1.6;
     }
 
     /* Footer */
@@ -113,30 +118,27 @@
 
     /* Responsive */
     @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        padding: 15px;
-      }
-
       header h1 {
         font-size: 1.2rem;
-      }
-
-      nav {
-        top: 120px;
-        gap: 15px;
       }
 
       nav a {
         font-size: 8px;
         padding: 6px;
       }
+
+      .content {
+        padding: 25px;
+      }
+
+      .content img {
+        width: 120px;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="https://i.imgur.com/f8YDSIN.png" alt="Quack Studios Logo">
     <h1>Quack Studios</h1>
   </header>
 
@@ -148,6 +150,9 @@
   </nav>
 
   <div class="content">
+    <!-- Quack Studios Logo above About Me -->
+    <img src="https://i.imgur.com/Ng8GBY7.png" alt="Quack Studios Logo">
+
     <section id="home">
       <h3>About Me & Quack Studios</h3>
       <p><strong>Hey, I’m JimboCoolins!</strong> I’m an indie game developer and the creator of <strong>Quack Studios</strong>, a small one-person studio focused on making cozy, quirky, and creative games. My goal is to design experiences that feel relaxing, fun, and a little unexpected.</p>
