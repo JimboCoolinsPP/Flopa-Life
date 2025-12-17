@@ -1,1 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Games</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #222;
+      color: white;
+      text-align: center;
+    }
+    header {
+      background: #111;
+      padding: 20px;
+      font-size: 2rem;
+    }
+    .game-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+    .game-item {
+      background: #333;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 10px;
+      width: 200px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .game-item:hover {
+      transform: scale(1.05);
+    }
+    .game-item img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .game-item a {
+      display: block;
+      color: #4caf50;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .game-container {
+      margin: 20px auto;
+      width: 80%;
+      max-width: 800px;
+      height: 500px;
+      background: black;
+      border: 3px solid #4caf50;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    footer {
+      background: #111;
+      padding: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>My Browser Games</header>
+  
+  <!-- Game Selection -->
+  <div class="game-item" onclick="switchGame('DoomDuck.html')">
+  <img src="https://i.imgur.com/zHIAUj6.jpeg" alt="DOOM Duck">
+  <a href="doom-duck.html">Play DOOM Duck</a>
+</div>
+ <div class="game-item" onclick="switchGame('game-quackventure.html')">
+      <img src="https://i.imgur.com/HMArhe5.jpeg" alt="Quackventure">
+      <a href="game-quackventure.html">Play Quackventure</a>
+    </div>
+  </div>
 
+  <!-- Game Display -->
+  <div class="game-container">
+    <iframe id="gameFrame" src="game-duckheist.html"></iframe>
+  </div>
+
+  <footer>© 2025 My Games</footer>
+
+  <script>
+    function switchGame(gameUrl) {
+      let frame = document.getElementById("gameFrame");
+      frame.src = gameUrl;
+    }
+  </script>
+
+</body>
+</html>
