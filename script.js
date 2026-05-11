@@ -18,3 +18,31 @@ function addPost() {
   alert("Post Added!");
 
 }
+
+function loadPosts() {
+
+  const postsContainer = document.getElementById("posts");
+
+  if (!postsContainer) return;
+
+  let posts = JSON.parse(localStorage.getItem("posts")) || [];
+
+  posts.forEach(post => {
+
+    postsContainer.innerHTML += `
+    
+      <div class="post">
+
+        <h4>${post.title}</h4>
+
+        <p><strong>Date:</strong> ${post.date}</p>
+
+        <p>${post.content}</p>
+
+      </div>
+
+    `;
+
+  });
+
+}
