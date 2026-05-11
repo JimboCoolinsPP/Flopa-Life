@@ -17,11 +17,16 @@ function addPost() {
   const title = document.getElementById("title").value;
   const content = document.getElementById("content").value;
 
-  const post = {
+  db.collection("posts").add({
     title: title,
     content: content,
-    date: new Date().toLocaleDateString()
-  };
+    date: new Date().toLocaleDateString(),
+    created: Date.now()
+  });
+
+  alert("Post uploaded to website!");
+
+}
 
   function login() {
 
