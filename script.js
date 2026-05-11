@@ -27,6 +27,8 @@ function loadPosts() {
 
   let posts = JSON.parse(localStorage.getItem("posts")) || [];
 
+  postsContainer.innerHTML = ""; // 🔥 clears old posts first
+
   posts.forEach(post => {
 
     postsContainer.innerHTML += `
