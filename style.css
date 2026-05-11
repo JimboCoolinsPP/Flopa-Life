@@ -235,3 +235,30 @@ footer {
   color: #ff6347;
 }
 </head>
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 3px solid #ff6347;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+textarea {
+  height: 200px;
+  resize: vertical;
+}
+
+button {
+  background: #ff6347;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive;
+  border-radius: 8px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
