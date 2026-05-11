@@ -56,30 +56,30 @@ function addPost() {
 
 function loadPosts() {
 
-  const postsContainer = document.getElementById("posts");
+  const container = document.getElementById("posts");
 
-  if (!postsContainer) return;
+  if (!container) return;
 
-  let posts = JSON.parse(localStorage.getItem("posts")) || [];
+  db.collection("posts")
+    .orderBy("created", "desc")
+    .onSnapshot(snapshot => {
 
-  postsContainer.innerHTML = ""; // 🔥 clears old posts first
+      container.innerHTML = "";
 
-  posts.forEach(post => {
+      snapshot.forEach(doc => {
 
-    postsContainer.innerHTML += `
-    
-      <div class="post">
+        const post = doc.data();
 
-        <h4>${post.title}</h4>
+        container.innerHTML += `
+          <div class="post">
+            <h4>${post.title}</h4>
+            <p><strong>Date:</strong> ${post.date}</p>
+            <p>${post.content}</p>
+          </div>
+        `;
 
-        <p><strong>Date:</strong> ${post.date}</p>
+      });
 
-        <p>${post.content}</p>
-
-      </div>
-
-    `;
-
-  });
+    });
 
 }
