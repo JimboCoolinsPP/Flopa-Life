@@ -12,10 +12,41 @@ firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 const auth = firebase.auth();
 
+
+// --------------------
+// LOGIN
+// --------------------
+function login() {
+
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  auth.signInWithEmailAndPassword(email, password)
+    .then(() => {
+
+      alert("Logged in!");
+
+      document.getElementById("loginBox").style.display = "none";
+      document.getElementById("adminPanel").style.display = "block";
+
+    })
+    .catch(err => alert(err.message));
+
+}
+
+
+// --------------------
+// ADD POST
+// --------------------
 function addPost() {
 
   const title = document.getElementById("title").value;
   const content = document.getElementById("content").value;
+
+  if (!title || !content) {
+    alert("Fill in both fields!");
+    return;
+  }
 
   db.collection("posts").add({
     title: title,
@@ -24,40 +55,19 @@ function addPost() {
     created: Date.now()
   });
 
-  alert("Post uploaded to website!");
+  alert("Post uploaded!");
 
+  document.getElementById("title").value = "";
+  document.getElementById("content").value = "";
 }
 
-  function login() {
 
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
-
-  auth.signInWithEmailAndPassword(email, password)
-    .then(() => {
-      alert("Logged in!");
-
-      document.getElementById("loginBox").style.display = "none";
-
-    })
-    .catch(err => alert(err.message));
-
-}
-
-  let posts = JSON.parse(localStorage.getItem("posts")) || [];
-
-  posts.unshift(post);
-
-  localStorage.setItem("posts", JSON.stringify(posts));
-
-  alert("Post Added!");
-
-}
-
+// --------------------
+// LOAD POSTS (DEVLOG)
+// --------------------
 function loadPosts() {
 
   const container = document.getElementById("posts");
-
   if (!container) return;
 
   db.collection("posts")
