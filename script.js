@@ -23,6 +23,22 @@ function addPost() {
     date: new Date().toLocaleDateString()
   };
 
+  function login() {
+
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  auth.signInWithEmailAndPassword(email, password)
+    .then(() => {
+      alert("Logged in!");
+
+      document.getElementById("loginBox").style.display = "none";
+
+    })
+    .catch(err => alert(err.message));
+
+}
+
   let posts = JSON.parse(localStorage.getItem("posts")) || [];
 
   posts.unshift(post);
